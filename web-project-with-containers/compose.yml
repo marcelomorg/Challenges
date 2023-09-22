@@ -1,0 +1,38 @@
+version: '3'
+services:
+  webserver:
+    container_name: WPC-server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    ports:
+      - "9000:80"
+    volumes:
+      - ./shared/web/:/usr/local/apache2/htdocs
+    restart: always
+    depends_on:
+      - db
+    links:
+      - db
+    networks:
+      - native_network_test
+  db:
+    image: 'mysql:5.7'
+    container_name: WPC-DB
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=dbteste
+    volumes:
+      - native_volume_test:/var/lib/mysql
+      - ./shared/database:/var/lib/mysql
+    networks:
+      - native_network_test
+volumes:
+  native_volume_test:
+networks:
+  native_network_test:
+    driver: bridge
