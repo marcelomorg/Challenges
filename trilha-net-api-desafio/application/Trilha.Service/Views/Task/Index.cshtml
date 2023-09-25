@@ -1,0 +1,26 @@
+@{
+  ViewData["Title"] = "Tarefas";
+}
+
+<head>
+  <link rel="stylesheet" href="~/css/Task/Index.css" />
+</head>
+<Body>
+  <div class="my-container">
+    <div class="row align-items-center">
+      <div class="col">
+        <a asp-controller="Task" asp-action="Show">Mostrar</a>
+      </div>
+      <div class="col">
+        <a asp-controller="Task" asp-action="Create">Criar</a>
+        
+      </div>
+      <div class="col">
+        <a asp-controller="Task" asp-action="Update">Editar</a>
+      </div>
+      <div class="col">
+        <a asp-controller="Task" asp-action="Erase">Apagar</a>
+      </div>
+    </div>
+  </div>
+</Body>

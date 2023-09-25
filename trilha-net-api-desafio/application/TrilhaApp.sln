@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trilha.Service", "Trilha.Service\Trilha.Service.csproj", "{11D4D17C-38DE-4DA4-9C1E-92A46C5BD529}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trilha.Model", "Trilha.Model\Trilha.Model.csproj", "{CCD6F90F-B377-416C-9CF7-131264A4DCF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trilha.Persistence", "Trilha.Persistence\Trilha.Persistence.csproj", "{C444F83E-56E3-4ADC-B80C-87D692A9A8B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11D4D17C-38DE-4DA4-9C1E-92A46C5BD529}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11D4D17C-38DE-4DA4-9C1E-92A46C5BD529}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11D4D17C-38DE-4DA4-9C1E-92A46C5BD529}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11D4D17C-38DE-4DA4-9C1E-92A46C5BD529}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCD6F90F-B377-416C-9CF7-131264A4DCF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCD6F90F-B377-416C-9CF7-131264A4DCF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCD6F90F-B377-416C-9CF7-131264A4DCF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCD6F90F-B377-416C-9CF7-131264A4DCF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C444F83E-56E3-4ADC-B80C-87D692A9A8B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C444F83E-56E3-4ADC-B80C-87D692A9A8B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C444F83E-56E3-4ADC-B80C-87D692A9A8B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C444F83E-56E3-4ADC-B80C-87D692A9A8B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
