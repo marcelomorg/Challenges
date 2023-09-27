@@ -23,7 +23,7 @@ namespace Trilha.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("Data")
+                    b.Property<DateTime?>("Data")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Descricao")

@@ -11,8 +11,8 @@ using Trilha.Persistence.Contexts;
 namespace Trilha.Persistence.Migrations
 {
     [DbContext(typeof(TrilhaContext))]
-    [Migration("20230924232606_TabelaCreate")]
-    partial class TabelaCreate
+    [Migration("20230925192521_TabelaEntityCreated")]
+    partial class TabelaEntityCreated
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,7 +26,7 @@ namespace Trilha.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("Data")
+                    b.Property<DateTime?>("Data")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Descricao")

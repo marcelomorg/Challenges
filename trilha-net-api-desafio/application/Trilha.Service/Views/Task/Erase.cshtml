@@ -1,0 +1,54 @@
+@model IEnumerable<Trilha.Model.Models.Tarefa>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">@Html.DisplayNameFor(x => x.Id)</th>
+      <th scope="col">@Html.DisplayNameFor(x => x.Titulo)</th>
+      <th scope="col">@Html.DisplayNameFor(x => x.Descricao)</th>
+      <th scope="col">@Html.DisplayNameFor(x => x.Data)</th>
+      <th scope="col">@Html.DisplayNameFor(x => x.Status)</th>
+      <th>Ação</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var item in Model)
+    {
+      <tr>
+        <th scope="row">@Html.DisplayFor(x => item.Id)</th>
+        <td>@Html.DisplayFor(x => item.Titulo)</td>
+        <td>@Html.DisplayFor(x => item.Descricao)</td>
+        <td>@Html.DisplayFor(x => item.Data)</td>
+        <td>@Html.DisplayFor(x => item.Status)</td>
+        <td>
+          @* Active modal button *@
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#identificador-@item.Id">
+            Apagar
+          </button>
+          @* Modal *@
+          <div class="modal fade" id="identificador-@item.Id" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Deseja realmente apagar os seguintes dados: </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  ID: @Html.DisplayFor(x => item.Id)<br>
+                  Titulo: @Html.DisplayFor(x => item.Titulo)<br>
+                  Descrição: @Html.DisplayFor(x => item.Descricao)<br>
+                  Data: @Html.DisplayFor(x => item.Data)<br>
+                  Status: @Html.DisplayFor(x => item.Status)
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
+                  <button type="button" class="btn btn-secondary">@Html.ActionLink("Apagar", "EraseEdit", new {id=item.Id}, new {style="text-decoration:none; color:white;"})</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

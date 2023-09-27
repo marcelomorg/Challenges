@@ -1,6 +1,9 @@
 @model Trilha.Model.Models.Tarefa;
 
-<form asp-action="Create">
+<form asp-action="updateEditTwo">
+    <div>
+        <input asp-for="Id" type="hidden" />
+    </div>
     <div class="mb-3">
         <label asp-for="Titulo" class="form-label">@Html.DisplayNameFor(model => model.Titulo)</label>
         <input asp-for="Titulo" type="text" class="form-control">
@@ -24,5 +27,5 @@
 
 
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Salvar alterações</button>
 </form>

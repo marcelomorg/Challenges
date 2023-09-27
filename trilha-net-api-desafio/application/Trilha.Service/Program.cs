@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using Trilh.Persistence.Interfaces;
+using Trilha.Persistence;
 using Trilha.Persistence.Contexts;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +10,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<TrilhaContext>(
     options => { options.UseSqlite(builder.Configuration.GetConnectionString("Default")); }
 );
+builder.Services.AddTransient<ITask, TaskPersist>();
 
 var app = builder.Build();
 

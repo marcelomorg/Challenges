@@ -9,17 +9,44 @@
   <div class="my-container">
     <div class="row align-items-center">
       <div class="col">
-        <a asp-controller="Task" asp-action="Show">Mostrar</a>
+        <a asp-controller="Task" asp-action="Show">
+          <div class="card" style="width: 15rem;">
+          <img src="~/assets/mostrar.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">MOSTRAR</p>
+            </div>
+          </div>
+        </a>
       </div>
       <div class="col">
-        <a asp-controller="Task" asp-action="Create">Criar</a>
-        
+        <a asp-controller="Task" asp-action="Create">
+          <div class="card" style="width: 15rem;">
+          <img src="~/assets/criar.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">CRIAR</p>
+            </div>
+          </div>
+        </a>
       </div>
       <div class="col">
-        <a asp-controller="Task" asp-action="Update">Editar</a>
+        <a asp-controller="Task" asp-action="Update">
+          <div class="card" style="width: 15rem;">
+          <img src="~/assets/editar.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">EDITAR</p>
+            </div>
+          </div>
+        </a>
       </div>
       <div class="col">
-        <a asp-controller="Task" asp-action="Erase">Apagar</a>
+        <a asp-controller="Task" asp-action="Erase">
+          <div class="card" style="width: 15rem;">
+          <img src="~/assets/apagar.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">APAGAR</p>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
   </div>
