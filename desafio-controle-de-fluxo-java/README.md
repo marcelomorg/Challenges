@@ -4,7 +4,7 @@
 - [Gleyson Sampaio](https://github.com/glysns)
 
 #### Solução desenvolvida por:
-- [Marcelo Morgado] (https://github.com/marcelomorg)
+- [Marcelo Morgado](https://github.com/marcelomorg)
 
 ## Controle de Fluxo - Desafio
 
